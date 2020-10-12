@@ -1,18 +1,11 @@
 import React from 'react';
 
-interface TitleProps{
-  "text": string;
-}
-
-function Title(props: TitleProps){
-return <h1>{props.text}</h1>
-}
+import './styles/global.css';
 
 function App() {
   return (
     <div className="App">
-      <Title text="Hello World"/>
-      <Title text="NWL3"/>
+      <h1>Hello World</h1>
     </div>
   );
 }
