@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import '../styles/pages/orphanages-map.css'
+import { FiPlus } from 'react-icons/fi';
+import '../styles/pages/orphanages-map.css';
 import mapMarkerImg from '../images/map_marker.svg';
 
 function OrphanagesMap() {
@@ -9,12 +11,14 @@ function OrphanagesMap() {
             <aside>
                 <header>
                     <img src={mapMarkerImg} alt="Logo" />
-                    <h2>
-                        Escolha um orfanato no mapa
-                    </h2>
-                    <p>
-                        Muitas crianças estão esperando a sua visita!
-                    </p>
+                    <div className="content">
+                        <h2>
+                            Escolha um orfanato no mapa
+                        </h2>
+                        <p>
+                            Muitas crianças estão esperando a sua visita!
+                        </p>
+                    </div>
                 </header>
                 <footer>
                     <strong>Brasília</strong>
@@ -23,6 +27,10 @@ function OrphanagesMap() {
             </aside>
 
             <div></div>
+
+            <Link to='/create-orphanage' className="create-orphanage">
+                <FiPlus size={32} color="#FFF" />
+            </Link>
         </div>
     );
 }
