@@ -7,7 +7,7 @@ import Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css'
 
 import '../styles/pages/orphanages-map.css';
-import mapMarkerImg from '../images/map_marker.svg';
+import mapMarkerImg from '../images/map-marker.svg';
 
 const mapIcon = Leaflet.icon({
     iconUrl: mapMarkerImg,
@@ -50,7 +50,7 @@ function OrphanagesMap() {
                 >
                     <Popup closeButton={false} maxWidth={240} minWidth={240} className='map-popup'>
                         Lar das meninas
-                        <Link to="">
+                        <Link to="/orphanages/1">
                             <FiArrowRight size={20} color="#fff"/>
                         </Link>
                     </Popup>
@@ -58,7 +58,7 @@ function OrphanagesMap() {
 
             </Map>
 
-            <Link to='/create-orphanage' className="create-orphanage">
+            <Link to='' className="create-orphanage">
                 <FiPlus size={32} color="#FFF" />
             </Link>
         </div>
