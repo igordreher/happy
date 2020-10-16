@@ -104,13 +104,14 @@ export default function CreateOrphanage() {
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
-              <input id="name" value={name} onChange={event => setName(event.target.value)} />
+              <input id="name" required value={name} onChange={event => setName(event.target.value)} />
             </div>
 
             <div className="input-block">
               <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
               <textarea
                 id="name"
+                required
                 value={about}
                 onChange={event =>
                   setAbout(event.target.value)}
@@ -128,9 +129,9 @@ export default function CreateOrphanage() {
                 <label htmlFor='image[]' className="new-image">
                   <FiPlus size={24} color="#15b6d6" />
                 </label>
+                <input multiple required onChange={handleImageSelection} type="file" id='image[]' />
               </div>
 
-              <input multiple onChange={handleImageSelection} type="file" id='image[]' />
             </div>
           </fieldset>
 
@@ -141,6 +142,7 @@ export default function CreateOrphanage() {
               <label htmlFor="instructions">Instruções</label>
               <textarea
                 id="instructions"
+                required
                 value={instructions}
                 onChange={event => setInstructions(event.target.value)}
               />
@@ -150,6 +152,7 @@ export default function CreateOrphanage() {
               <label htmlFor="opening_hours">Horário de atendimento</label>
               <input
                 id="opening_hours"
+                required
                 value={opening_hours}
                 onChange={event => setOpeningHours(event.target.value)}
               />
