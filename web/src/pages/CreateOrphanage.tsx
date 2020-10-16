@@ -14,7 +14,8 @@ import api from "../services/api";
 
 export default function CreateOrphanage() {
   const history = useHistory()
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
+  const [position, setPosition] = useState({ latitude: 0, longitude: 0})
+  const [isMapClicked, setIsMapClicked] = useState(false)
   const [name, setName] = useState('')
   const [about, setAbout] = useState('')
   const [instructions, setInstructions] = useState('')
@@ -25,6 +26,7 @@ export default function CreateOrphanage() {
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng
+    setIsMapClicked(true)
 
     setPosition({
       latitude: lat,
@@ -47,6 +49,11 @@ export default function CreateOrphanage() {
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault()
+
+    if(!isMapClicked) {
+      alert('Insira posição no mapa')
+      return false
+    }
 
     const { latitude, longitude } = position
 
