@@ -11,3 +11,24 @@ organizado pela [RocketSeat](https://rocketseat.com.br/).
 * [Node.js](https://nodejs.org/en/)
 * [React](https://reactjs.org/)
 * [Typescript](https://www.typescriptlang.org/)
+
+## Instalação
+
+First, clone the repository and cd to folder:
+```
+git clone https://github.com/igordreher/happy/ --recursive
+cd happy
+```
+To install dependencies:  
+```
+npm run install-web && npm run install-backend
+```  
+To run database migrations:  
+```
+npm run migrate
+```  
+Finally, on separate terminals:  
+```
+npm run server
+npm run web
+```

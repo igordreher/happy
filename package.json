@@ -1,0 +1,23 @@
+{
+  "name": "happy-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web/src/App.tsx",
+  "scripts": {
+    "install-web": "cd web && npm install",
+    "install-backend": "cd backend && npm install",
+    "migrate": "cd backend && npm run typeorm migration:run",
+    "web": "cd web && npm start",
+    "server": "cd backend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igordreher/happy.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igordreher/happy/issues"
+  },
+  "homepage": "https://github.com/igordreher/happy#readme"
+}
