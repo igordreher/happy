@@ -14,20 +14,20 @@ organizado pela [RocketSeat](https://rocketseat.com.br/).
 
 ## Instalação
 
-First, clone the repository and cd to folder:
+Primeiramente, clone o repositório:
 ```
 git clone https://github.com/igordreher/happy/ --recursive
 cd happy
 ```
-To install dependencies:  
+Instalar dependências:  
 ```
 npm run install-web && npm run install-backend
 ```  
-To run database migrations:  
+Fazer migrações do banco de dados:  
 ```
 npm run migrate
 ```  
-Finally, on separate terminals:  
+Finalmente, em terminais separados:  
 ```
 npm run server
 npm run web
